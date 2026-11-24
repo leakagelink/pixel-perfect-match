@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Marketing pages are top-level routes and the signed-in workspace lives under `src/routes/_authenticated/`; this keeps public pages crawlable and private pages behind sign-in.
+- Profile reads and writes go through authenticated server functions in `src/lib/profile.functions.ts`; profile access must stay scoped to the signed-in user.

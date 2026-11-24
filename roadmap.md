@@ -1,6 +1,7 @@
 # SocialFlow
-- [ ] Semrush keyword research and documented map
-- [ ] Home, pricing, public pages, article, and SEO
-- [ ] Dashboard, connections, automation, ads, billing previews
-- [ ] Real sign-in/sign-up with private user profiles (name, avatar, preferences), approved by user
-- [ ] Desktop/mobile flow checks and tests
+- [x] Semrush keyword research and documented map
+- [x] Home, pricing, public pages, article, and SEO
+- [x] Dashboard, connections, automation, ads, billing previews
+- [x] Real sign-in/sign-up with private user profiles
+- [x] Tests
+- [ ] sitemap.xml — blocked until final public domain
