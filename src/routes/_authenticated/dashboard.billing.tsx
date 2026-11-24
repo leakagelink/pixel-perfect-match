@@ -1,0 +1,9 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { useState } from 'react';
+import { CreditCard, ShieldCheck } from 'lucide-react';
+import { DashboardHeading, ComingSoon } from '@/components/socialflow/dashboard';
+import { PricingCards } from '@/components/socialflow/pricing';
+import { Button } from '@/components/ui/button';
+import { pageHead } from '@/lib/socialflow';
+export const Route = createFileRoute('/_authenticated/dashboard/billing')({ head: () => pageHead('Your Subscription & SocialFlow Billing Overview', 'Explore SocialFlow subscription plans and your billing overview. Compare Starter, Growth and Agency options. Checkout and paid subscriptions are coming soon.', '/dashboard/billing'), component: Billing });
+function Billing() { const [open, setOpen] = useState(false); return <><DashboardHeading title="More room for your next idea." description="A plan that fits your creative ambitions." /><section className="mb-10 border-y border-border py-6 flex flex-wrap gap-6 justify-between items-center"><div><span className="status-pill pending mb-3">Product preview</span><h2 className="text-xl font-bold">No active paid subscription</h2><p className="text-sm text-muted-foreground mt-2">You haven’t been charged. Free trials and billing aren’t live yet.</p></div><Button variant="outline" onClick={() => setOpen(true)}><CreditCard />Checkout preview</Button></section><PricingCards /><div className="flex gap-3 text-sm text-muted-foreground mt-10 border-t border-border pt-6"><ShieldCheck size={20} className="text-success shrink-0" /><p>No card details are collected in this preview. Checkout, invoices, cancellation, and payment-provider setup will be available once billing is enabled.</p></div><ComingSoon open={open} onOpenChange={setOpen} title="Subscription checkout">Paid plans aren’t active yet. No payment is collected and no subscription will be created.</ComingSoon></>; }
